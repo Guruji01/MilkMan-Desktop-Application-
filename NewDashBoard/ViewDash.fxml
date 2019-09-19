@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="board" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="536.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewDashBoard.ViewDashController">
+   <children>
+      <Separator layoutX="23.0" layoutY="82.0" prefHeight="8.0" prefWidth="495.0" style="-fx-background-color: orange;">
+         <effect>
+            <Shadow />
+         </effect></Separator>
+      <ImageView fitHeight="146.0" fitWidth="110.0" layoutX="29.0" layoutY="96.0" onMouseClicked="#Face" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@face2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="329.0" layoutX="137.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cooltext330246498052780.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="84.0" fitWidth="249.0" layoutX="146.0" layoutY="232.0" onMouseClicked="#Variations" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@variation.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="153.0" fitWidth="195.0" layoutX="336.0" layoutY="86.0" nodeOrientation="INHERIT" onMouseClicked="#BillCall" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@billcall_01.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="29.0" layoutY="328.0" onMouseClicked="#CustomerList" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@list%20-%20Copy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="388.0" layoutY="328.0" onMouseClicked="#BillList" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@list2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="214.0" layoutY="328.0" onMouseClicked="#VarList" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@list%20-%20Copy%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="181.0" layoutX="14.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Customer%20Log.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="183.0" layoutX="194.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Variation%20Log.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="84.0" fitWidth="121.0" layoutX="400.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Billing%20Log.png" />
+         </image>
+      </ImageView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
