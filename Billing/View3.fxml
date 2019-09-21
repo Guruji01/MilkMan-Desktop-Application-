@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Billing.View3Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5cae89" height="85.0" layoutX="101.0" layoutY="544.0" stroke="BLACK" strokeType="INSIDE" width="214.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b1c2d3" height="111.0" layoutX="172.0" layoutY="408.0" stroke="BLACK" strokeType="INSIDE" width="280.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b1c2d3" height="141.0" layoutX="172.0" layoutY="248.0" stroke="BLACK" strokeType="INSIDE" width="280.0">
+         <effect>
+            <MotionBlur>
+               <input>
+                  <Shadow />
+               </input>
+            </MotionBlur>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b1c2d3" height="141.0" layoutX="171.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" width="280.0">
+         <effect>
+            <Shadow>
+               <input>
+                  <MotionBlur />
+               </input>
+            </Shadow>
+         </effect>
+      </Rectangle>
+      <Text fill="#da1d1d" layoutX="188.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Billing" textAlignment="CENTER" wrappingWidth="88.72265625">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+         <effect>
+            <Glow level="0.82" />
+         </effect>
+      </Text>
+      <Separator layoutX="5.0" layoutY="57.0" prefHeight="21.0" prefWidth="436.0" />
+      <Text fill="WHITE" layoutX="174.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cqty" textAlignment="CENTER" wrappingWidth="49.369140625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="174.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bqty" textAlignment="CENTER" wrappingWidth="49.369140625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Bqty" editable="false" layoutX="233.0" layoutY="313.0" prefHeight="25.0" prefWidth="60.0" />
+      <TextField fx:id="Cqty" editable="false" layoutX="233.0" layoutY="266.0" prefHeight="25.0" prefWidth="60.0" />
+      <Text fill="WHITE" layoutX="322.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P/L" textAlignment="CENTER" wrappingWidth="49.369140625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="322.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P/L" textAlignment="CENTER" wrappingWidth="49.369140625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Cbill" editable="false" layoutX="385.0" layoutY="266.0" prefHeight="25.0" prefWidth="60.0" />
+      <TextField fx:id="Bbill" editable="false" layoutX="385.0" layoutY="306.0" prefHeight="25.0" prefWidth="60.0" />
+      <TextField fx:id="totalBill" editable="false" layoutX="208.0" layoutY="584.0" prefHeight="25.0" prefWidth="89.0" />
+      <Button layoutX="163.0" layoutY="550.0" mnemonicParsing="false" onAction="#doGenerateBill" prefHeight="25.0" prefWidth="89.0" text="Generate Bill" textAlignment="CENTER" />
+      <DatePicker fx:id="lbldos" editable="false" layoutX="294.0" layoutY="103.0" prefHeight="25.0" prefWidth="139.0" />
+      <DatePicker fx:id="lbldoe" editable="false" layoutX="294.0" layoutY="146.0" prefHeight="25.0" prefWidth="139.0" />
+      <TextField fx:id="mobile" editable="false" layoutX="259.0" layoutY="353.0" prefHeight="19.0" prefWidth="149.0" />
+      <Text fill="WHITE" layoutX="189.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile" textAlignment="CENTER" wrappingWidth="49.369140625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="178.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" textAlignment="CENTER" wrappingWidth="72.369140625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="172.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date" textAlignment="CENTER" wrappingWidth="72.369140625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="183.0" layoutY="187.0" mnemonicParsing="false" onAction="#doGetDays" prefHeight="25.0" prefWidth="72.0" text="Get Days" />
+      <Text fill="WHITE" layoutX="371.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CQ" textAlignment="CENTER" wrappingWidth="49.369140625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="183.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BQ" textAlignment="CENTER" wrappingWidth="49.369140625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="259.0" layoutY="464.0" mnemonicParsing="false" onAction="#doGetVariation" prefHeight="25.0" prefWidth="89.0" text="Get Variation" />
+      <TextField fx:id="CQ" editable="false" layoutX="366.0" layoutY="464.0" prefHeight="25.0" prefWidth="60.0" />
+      <TextField fx:id="BQ" editable="false" layoutX="178.0" layoutY="464.0" prefHeight="25.0" prefWidth="60.0" />
+      <Text fill="WHITE" layoutX="116.0" layoutY="602.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Bill" textAlignment="CENTER" wrappingWidth="72.36914102733135">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <TextField fx:id="ddays" editable="false" layoutX="303.0" layoutY="187.0" prefHeight="25.0" prefWidth="60.0" />
+      <ListView fx:id="lblList2" layoutX="22.0" layoutY="87.0" onMouseClicked="#onMouseClicked" prefHeight="429.0" prefWidth="128.0" />
+      <Text fill="#107217" layoutX="361.0" layoutY="591.0" onMouseClicked="#donext" strokeType="OUTSIDE" strokeWidth="0.0" text="Next-&gt;&gt;" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="lab" layoutX="334.0" layoutY="542.0" prefHeight="25.0" prefWidth="118.0" textFill="#e10f0f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="542.0" mnemonicParsing="false" onAction="#doSave" prefHeight="85.0" prefWidth="72.0" text="Save">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
