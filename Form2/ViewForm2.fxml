@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Form2.ViewForm2Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="360.0" layoutX="11.0" layoutY="267.0" stroke="BLACK" strokeType="INSIDE" width="502.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="164.0" layoutX="11.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" width="502.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Rectangle>
+      <Text fill="#d31111" layoutX="185.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variation Log">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Text>
+      <Separator layoutX="32.0" layoutY="64.0" prefHeight="16.0" prefWidth="467.0" />
+      <Text fill="WHITE" layoutX="26.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="26.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date From">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="dos" layoutX="191.0" layoutY="165.0" prefHeight="25.0" prefWidth="150.0" />
+      <ComboBox fx:id="lblComboitem" editable="true" layoutX="187.0" layoutY="115.0" prefWidth="150.0" />
+      <Button layoutX="372.0" layoutY="114.0" mnemonicParsing="false" onAction="#doFetch" text="Fetch" />
+      <TableView fx:id="lblTable" layoutX="22.0" layoutY="280.0" prefHeight="336.0" prefWidth="476.0" />
+      <Button layoutX="242.0" layoutY="214.0" mnemonicParsing="false" onAction="#doShowall" text="Show All" />
+      <Button layoutX="369.0" layoutY="164.0" mnemonicParsing="false" onAction="#Dosearch" text="Search" />
+      <Button layoutX="435.0" layoutY="114.0" mnemonicParsing="false" onAction="#doDelete" text="Delete" />
+   </children>
+</AnchorPane>
